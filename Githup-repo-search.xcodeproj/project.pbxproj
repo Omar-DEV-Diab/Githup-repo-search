@@ -11,9 +11,9 @@
 		07A752DB281B3E9B00E24E3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752DA281B3E9B00E24E3E /* SceneDelegate.swift */; };
 		07A752DD281B3E9B00E24E3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752DC281B3E9B00E24E3E /* ViewController.swift */; };
 		07A752E0281B3E9B00E24E3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A752DE281B3E9B00E24E3E /* Main.storyboard */; };
-		07A752E3281B3E9B00E24E3E /* Githup_repo_search.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07A752E1281B3E9B00E24E3E /* Githup_repo_search.xcdatamodeld */; };
 		07A752E5281B3E9F00E24E3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A752E4281B3E9F00E24E3E /* Assets.xcassets */; };
 		07A752E8281B3E9F00E24E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A752E6281B3E9F00E24E3E /* LaunchScreen.storyboard */; };
+		07A752F0281B402800E24E3E /* repoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752EF281B402800E24E3E /* repoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +22,10 @@
 		07A752DA281B3E9B00E24E3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		07A752DC281B3E9B00E24E3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07A752DF281B3E9B00E24E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		07A752E2281B3E9B00E24E3E /* Githup_repo_search.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Githup_repo_search.xcdatamodel; sourceTree = "<group>"; };
 		07A752E4281B3E9F00E24E3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07A752E7281B3E9F00E24E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07A752E9281B3E9F00E24E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07A752EF281B402800E24E3E /* repoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +61,11 @@
 				07A752D8281B3E9B00E24E3E /* AppDelegate.swift */,
 				07A752DA281B3E9B00E24E3E /* SceneDelegate.swift */,
 				07A752DC281B3E9B00E24E3E /* ViewController.swift */,
+				07A752EF281B402800E24E3E /* repoTableViewCell.swift */,
 				07A752DE281B3E9B00E24E3E /* Main.storyboard */,
 				07A752E4281B3E9F00E24E3E /* Assets.xcassets */,
 				07A752E6281B3E9F00E24E3E /* LaunchScreen.storyboard */,
 				07A752E9281B3E9F00E24E3E /* Info.plist */,
-				07A752E1281B3E9B00E24E3E /* Githup_repo_search.xcdatamodeld */,
 			);
 			path = "Githup-repo-search";
 			sourceTree = "<group>";
@@ -143,8 +143,8 @@
 			files = (
 				07A752DD281B3E9B00E24E3E /* ViewController.swift in Sources */,
 				07A752D9281B3E9B00E24E3E /* AppDelegate.swift in Sources */,
-				07A752E3281B3E9B00E24E3E /* Githup_repo_search.xcdatamodeld in Sources */,
 				07A752DB281B3E9B00E24E3E /* SceneDelegate.swift in Sources */,
+				07A752F0281B402800E24E3E /* repoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,19 +362,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		07A752E1281B3E9B00E24E3E /* Githup_repo_search.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				07A752E2281B3E9B00E24E3E /* Githup_repo_search.xcdatamodel */,
-			);
-			currentVersion = 07A752E2281B3E9B00E24E3E /* Githup_repo_search.xcdatamodel */;
-			path = Githup_repo_search.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 07A752CD281B3E9B00E24E3E /* Project object */;
 }
