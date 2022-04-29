@@ -14,6 +14,11 @@
 		07A752E5281B3E9F00E24E3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A752E4281B3E9F00E24E3E /* Assets.xcassets */; };
 		07A752E8281B3E9F00E24E3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A752E6281B3E9F00E24E3E /* LaunchScreen.storyboard */; };
 		07A752F0281B402800E24E3E /* repoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752EF281B402800E24E3E /* repoTableViewCell.swift */; };
+		07A752F2281C3C9500E24E3E /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F1281C3C9500E24E3E /* HttpService.swift */; };
+		07A752F4281C443800E24E3E /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F3281C443800E24E3E /* HttpHelper.swift */; };
+		07A752F6281C466000E24E3E /* searchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F5281C466000E24E3E /* searchService.swift */; };
+		07A752F8281C8CCE00E24E3E /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F7281C8CCD00E24E3E /* HttpResponse.swift */; };
+		07A752FA281C908100E24E3E /* HttpJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F9281C908100E24E3E /* HttpJSONResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		07A752E7281B3E9F00E24E3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07A752E9281B3E9F00E24E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A752EF281B402800E24E3E /* repoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repoTableViewCell.swift; sourceTree = "<group>"; };
+		07A752F1281C3C9500E24E3E /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		07A752F3281C443800E24E3E /* HttpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
+		07A752F5281C466000E24E3E /* searchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchService.swift; sourceTree = "<group>"; };
+		07A752F7281C8CCD00E24E3E /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		07A752F9281C908100E24E3E /* HttpJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpJSONResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,11 @@
 				07A752E4281B3E9F00E24E3E /* Assets.xcassets */,
 				07A752E6281B3E9F00E24E3E /* LaunchScreen.storyboard */,
 				07A752E9281B3E9F00E24E3E /* Info.plist */,
+				07A752F1281C3C9500E24E3E /* HttpService.swift */,
+				07A752F3281C443800E24E3E /* HttpHelper.swift */,
+				07A752F5281C466000E24E3E /* searchService.swift */,
+				07A752F7281C8CCD00E24E3E /* HttpResponse.swift */,
+				07A752F9281C908100E24E3E /* HttpJSONResponse.swift */,
 			);
 			path = "Githup-repo-search";
 			sourceTree = "<group>";
@@ -142,9 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A752DD281B3E9B00E24E3E /* ViewController.swift in Sources */,
+				07A752F2281C3C9500E24E3E /* HttpService.swift in Sources */,
+				07A752FA281C908100E24E3E /* HttpJSONResponse.swift in Sources */,
 				07A752D9281B3E9B00E24E3E /* AppDelegate.swift in Sources */,
 				07A752DB281B3E9B00E24E3E /* SceneDelegate.swift in Sources */,
+				07A752F8281C8CCE00E24E3E /* HttpResponse.swift in Sources */,
+				07A752F6281C466000E24E3E /* searchService.swift in Sources */,
 				07A752F0281B402800E24E3E /* repoTableViewCell.swift in Sources */,
+				07A752F4281C443800E24E3E /* HttpHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
