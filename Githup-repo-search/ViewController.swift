@@ -40,14 +40,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard !searchBar.text!.isEmpty else {
             return
         }
-        searchQuery()
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(searchQuery), object: nil)
+        perform(#selector(searchQuery), with: nil, afterDelay: 0.5)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.isEmpty else {
             return
         }
-        searchQuery()
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(searchQuery), object: nil)
+        perform(#selector(searchQuery), with: nil, afterDelay: 0.5)
     }
 
     @objc func searchQuery() {
