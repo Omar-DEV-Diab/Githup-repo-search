@@ -19,6 +19,7 @@
 		07A752F6281C466000E24E3E /* searchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F5281C466000E24E3E /* searchService.swift */; };
 		07A752F8281C8CCE00E24E3E /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F7281C8CCD00E24E3E /* HttpResponse.swift */; };
 		07A752FA281C908100E24E3E /* HttpJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752F9281C908100E24E3E /* HttpJSONResponse.swift */; };
+		07A752FC281D8ED700E24E3E /* searchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A752FB281D8ED700E24E3E /* searchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		07A752F5281C466000E24E3E /* searchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchService.swift; sourceTree = "<group>"; };
 		07A752F7281C8CCD00E24E3E /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
 		07A752F9281C908100E24E3E /* HttpJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpJSONResponse.swift; sourceTree = "<group>"; };
+		07A752FB281D8ED700E24E3E /* searchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				07A752F5281C466000E24E3E /* searchService.swift */,
 				07A752F7281C8CCD00E24E3E /* HttpResponse.swift */,
 				07A752F9281C908100E24E3E /* HttpJSONResponse.swift */,
+				07A752FB281D8ED700E24E3E /* searchResponse.swift */,
 			);
 			path = "Githup-repo-search";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A752FC281D8ED700E24E3E /* searchResponse.swift in Sources */,
 				07A752DD281B3E9B00E24E3E /* ViewController.swift in Sources */,
 				07A752F2281C3C9500E24E3E /* HttpService.swift in Sources */,
 				07A752FA281C908100E24E3E /* HttpJSONResponse.swift in Sources */,
