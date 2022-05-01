@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var reposTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var array = ["sakhdk","nxz,mn,","uii9934"]
+    var array = [item]()
     override func viewDidLoad() {
         super.viewDidLoad()
         reposTableView.delegate = self
@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return array.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,8 +31,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init()
         let cell = tableView.dequeueReusableCell(withIdentifier: "repoCell", for: indexPath) as! repoTableViewCell
+        cell.populateCell(array[indexPath.row])
         return cell
     }
     
