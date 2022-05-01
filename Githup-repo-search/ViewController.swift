@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var reposTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var array = [item]()
+    var reposArray = [item]()
     var pageCount = 1
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return reposArray.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,8 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "repoCell", for: indexPath) as! repoTableViewCell
-        cell.populateCell(array[indexPath.row])
-        if indexPath.row == array.count - 1 {
+        cell.populateCell(reposArray[indexPath.row])
+        if indexPath.row == reposArray.count - 1 {
             loadMore()
         }
         return cell
@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard response != nil else{
                 return
             }
-            array = response!
+            reposArray = response!
             reposTableView.reloadData()
         }
     }
@@ -74,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard response != nil else{
                 return
             }
-            array.append(contentsOf: response!)
+            reposArray.append(contentsOf: response!)
             reposTableView.reloadData()
         }
     }
