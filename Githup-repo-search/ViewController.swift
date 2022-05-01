@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var searchBar: UISearchBar!
     
     var array = [item]()
+    var pageCount = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         reposTableView.delegate = self
@@ -33,6 +35,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "repoCell", for: indexPath) as! repoTableViewCell
         cell.populateCell(array[indexPath.row])
+        if indexPath.row == array.count - 1 {
+            loadMore()
+        }
         return cell
     }
     
@@ -54,11 +59,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @objc func searchQuery() {
         guard let searchText = searchBar.text else { return }
-        searchService.searchForRepositories(searchText) { [self] (response) in
+        searchService.searchForRepositories(searchText, pageCount) { [self] (response) in
             guard response != nil else{
                 return
             }
             array = response!
+            reposTableView.reloadData()
+        }
+    }
+    
+    func loadMore() {
+        pageCount += 1
+        searchService.searchForRepositories(searchBar.text!, pageCount) { [self] (response) in
+            guard response != nil else{
+                return
+            }
+            array.append(contentsOf: response!)
             reposTableView.reloadData()
         }
     }
