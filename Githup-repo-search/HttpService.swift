@@ -28,4 +28,13 @@ class HttpService {
         }
     }
     
+    func decodeJsonResponse<T:Codable>(_ response: HttpResponse?, _ objectType:T.Type) -> T? {
+        do {
+            let reposResponse = try JSONDecoder().decode(objectType.self, from: (response?.response)!)
+            return reposResponse
+        } catch {
+            print("Unable to Decode resumes (\(error))")
+            return nil
+        }
+    }
 }

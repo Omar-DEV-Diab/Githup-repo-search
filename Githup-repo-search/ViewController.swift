@@ -53,10 +53,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @objc func searchQuery() {
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(searchQuery), object: nil)
         guard let searchText = searchBar.text else { return }
-        searchService.searchForRepositories(searchText) { (response) in
-            //
+        searchService.searchForRepositories(searchText) { [self] (response) in
+            guard response != nil else{
+                return
+            }
+            array = response!
+            reposTableView.reloadData()
         }
     }
 }
