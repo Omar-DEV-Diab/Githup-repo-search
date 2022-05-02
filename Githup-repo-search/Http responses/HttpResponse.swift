@@ -24,7 +24,11 @@ class HttpResponse {
         
         guard isUrlResponseSuccess(urlResponse),
               nil == error else{
-            self.success = false;
+            self.success = false
+            guard (error != nil) else {
+                self.errorMessage = "error-with-code-\(urlResponse!.statusCode)"
+                return
+            }
             self.errorMessage = !error!.localizedDescription.isEmpty ? error!.localizedDescription : "error-with-code-\(urlResponse!.statusCode)"
             return
         }
