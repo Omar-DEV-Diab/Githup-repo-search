@@ -17,6 +17,7 @@ class repoTableViewCell: UITableViewCell {
     @IBOutlet weak var ownerProfileImage: UIImageView!
     @IBOutlet weak var ownerName: UILabel!
     
+    var kvoToken: NSKeyValueObservation?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +35,17 @@ class repoTableViewCell: UITableViewCell {
         ownerName.adjustsFontSizeToFitWidth = true
     }
     
+    fileprivate func observeImage(_ repo: item) {
+        guard repo.owner.image == nil else{
+            ownerProfileImage.image = repo.owner.image
+            self.setNeedsLayout()
+            return
+        }
+        kvoToken = repo.owner.observe(\.image, options: .new) {[self] (repo, change) in
+            guard let image = change.newValue else { return }
+            ownerProfileImage.image = image
+            self.setNeedsLayout()
+        }
     }
     
     func populateCell(_ repo: item) {
@@ -42,7 +54,11 @@ class repoTableViewCell: UITableViewCell {
         descriptionLbl.text = repo.description
         starCountLbl.text = repo.stargazers_count?.codingKey.stringValue
         forkCountLbl.text = repo.forks_count?.codingKey.stringValue
+        ownerName.text = repo.owner.login
+        observeImage(repo)
     }
-    
 
+    deinit {
+        kvoToken?.invalidate()
+    }
 }
