@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         reposTableView.delegate = self
         reposTableView.dataSource = self
         reposTableView.allowsSelection = false
+        reposTableView.keyboardDismissMode = .onDrag
         
         searchBar.delegate = self
     }
@@ -47,6 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(searchQuery), object: nil)
         perform(#selector(searchQuery), with: nil, afterDelay: 0.5)
+        searchBar.endEditing(true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
