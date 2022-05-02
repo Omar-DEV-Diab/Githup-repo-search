@@ -46,6 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard !searchBar.text!.isEmpty else {
             return
         }
+        pageCount = 1
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(searchQuery), object: nil)
         perform(#selector(searchQuery), with: nil, afterDelay: 0.5)
         searchBar.endEditing(true)
@@ -55,6 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         guard !searchText.isEmpty else {
             return
         }
+        pageCount = 1
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(searchQuery), object: nil)
         perform(#selector(searchQuery), with: nil, afterDelay: 0.5)
     }
