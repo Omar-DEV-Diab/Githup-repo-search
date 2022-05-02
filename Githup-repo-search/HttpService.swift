@@ -19,8 +19,7 @@ class HttpService {
         session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
     }
     
-    func getResponseFromUrl(_ url: String?, andQueryString queryString: String?, completionHandler: @escaping (_ response: HttpResponse?) -> Void) {
-        let urlRequest = HttpHelper.getGETRequest(url, andQueryString: queryString)
+    func getResponseFromUrlRequest(_ urlRequest: URLRequest?, completionHandler: @escaping (_ response: HttpResponse?) -> Void) {
         if let urlRequest = urlRequest {
             session.dataTask(with: urlRequest) { data, response, error in
                 completionHandler(HttpResponse.init(data, response as? HTTPURLResponse, error))

@@ -12,8 +12,10 @@ class searchService{
     static let searchUrl = "https://api.github.com/search/repositories"
     
     class func searchForRepositories(_ name: String, _ pageNumber: Int, completion: @escaping (([item])?)->()) {
-        let queryString = "\(name)&page=\(pageNumber)"
-        HttpService.httpSingelton.getResponseFromUrl(searchUrl, andQueryString: queryString) { response in
+        let queryString = "\(name)&page=\(pageNumber)&sort=stars&order=desc"
+        let urlRequest = HttpHelper.getGETRequestWithAccept(searchUrl, andQueryString: queryString)
+        
+        HttpService.httpSingelton.getResponseFromUrlRequest(urlRequest) { response in
             guard let reposResponse = HttpService.httpSingelton.decodeJsonResponse(response, searchResponse.self) else{
                 completion(nil)
                 return
