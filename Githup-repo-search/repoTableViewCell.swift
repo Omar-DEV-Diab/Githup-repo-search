@@ -14,6 +14,9 @@ class repoTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var starCountLbl: UILabel!
     @IBOutlet weak var forkCountLbl: UILabel!
+    @IBOutlet weak var ownerProfileImage: UIImageView!
+    @IBOutlet weak var ownerName: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +29,11 @@ class repoTableViewCell: UITableViewCell {
         
         descriptionLbl.numberOfLines = 0
         descriptionLbl.adjustsFontSizeToFitWidth = true
+        
+        ownerName.numberOfLines = 0
+        ownerName.adjustsFontSizeToFitWidth = true
+    }
+    
     }
     
     func populateCell(_ repo: item) {
